@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Londrina+Solid:wght@100;300;400&family=Roboto:wght@100;300;400;500;700&display=swap');
+:root { 
+	--primary-fill: #5fc0b3;
+	--primary-text: #192c43;
+}
+h1 {
+	font-family: 'Londrina Solid', sans-serif;
+	font-size: 5rem;
+	color: var(--primary-text);
+	text-align: left;
+	line-height: 1;
+}
+h2 {
+	font-family: 'Londrina Sketch', sans-serif;
+	font-size: 3.5rem;
+	text-align: left;
+	color: var(--primary-text);
+	line-height: 1;
+}
+
+.App {
+text-align: center;
+}
+
+
+
+
+
+.App-header {
+	background-color: var(--primary-fill);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5rem;
+}
+.mascot-image {
+	max-height: 460px;
+}
+.icons {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0.75rem;
+}
+.icon-link {
+	color: var(--primary-text);
+	border: 2px solid transparent;
+	border-radius: 0.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	position: relative;
+	svg {
+		pointer-events: none;
+	}
+	.icon-tooltip {
+		position: absolute;
+		opacity: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: 0.5s ease;
+		top: 0;
+		color: var(--primary-fill);
+		background: var(--primary-text);
+		font-size: 0.625rem;
+		text-transform: uppercase;
+		padding: 0.25rem;
+		border-radius: 0.25rem;
+		pointer-events: none;
+	}
+	&:hover {
+		border-color: var(--primary-text);
+		.icon-tooltip {
+			top: -1.5rem;
+			opacity: 0.75;
+			transition: 0.5s ease;
+		}
+	}
+}
+footer {
+	font-size: 0.625rem;
+	color: #333;
+	padding: 1rem 0;
+	background-color: var(--primary-fill);
+}
+
+@media screen and (max-width: 767px) {
+	.App-header {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+	.mascot-image {
+		max-height: 300px;
+	}
+	h1 {
+		margin-top: 0;
+		text-align: center;
+		font-size: 4rem;
+	}
+	h2 {
+		text-align: center;
+		font-size: 2.5rem;
+	}
+	.icons {
+		justify-content: center;
+	}
+}
