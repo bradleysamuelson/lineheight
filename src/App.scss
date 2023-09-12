@@ -2,7 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Londrina+Solid:wght@100;300;400&family=Roboto:wght@100;300;400;500;700&display=swap');
 :root { 
 	--primary-fill: #5fc0b3;
+	--primary-fill-light: #B2FAF0;
 	--primary-text: #192c43;
+	--secondary-fill: #F0F3F3;
+	--sectondary-text: #5C6B7D;
+	--border-primary: var(--primary-text);
+	--border-secondary: #BFCBD9;
+	--primary-link: #386396;
+}
+body {
+	background-color: var(--secondary-fill);
+	font-family: 'Roboto', sans-serif;
 }
 h1 {
 	font-family: 'Londrina Solid', sans-serif;
@@ -10,6 +20,7 @@ h1 {
 	color: var(--primary-text);
 	text-align: left;
 	line-height: 1;
+	margin-bottom: 1.5rem;
 }
 h2 {
 	font-family: 'Londrina Sketch', sans-serif;
@@ -17,23 +28,86 @@ h2 {
 	text-align: left;
 	color: var(--primary-text);
 	line-height: 1;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+}
+h3 {
+	font-size: 2.5rem;
+	font-family: 'Londrina Sketch', sans-serif;
+	color: var(--primary-text);
+	&.portfolio-header {
+		margin: 0;
+		position: absolute;
+		top: -40px;
+		left: 2rem;
+	}
+}
+a {
+	color: var(--primary-link);
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		background: var(--primary-link);
+		opacity: 0;
+		left: -2px;
+		top: -2px;
+		bottom: -2px;
+		right: 100%;
+		transition: right 0.5s ease;
+	}
+	&:hover {
+		color: var(--primary-text);
+		&::before {
+			content: '';
+			position: absolute;
+			opacity: 0.1;
+			right: -2px;
+			transition: right 0.5s ease;
+		}
+	}
+	&:focus {
+		outline: none;
+		&::before {
+			content: '';
+			position: absolute;
+			opacity: 0.1;
+			right: -2px;
+			transition: right 0.5s ease;
+		}
+	}
+	
+}
+p {
+	line-height: 1.35;
+}
+h4 {
+	font-size: 2rem;
+	margin: 0;
+	font-family: 'Londrina Solid', sans-serif;
+	font-weight: 300;
+}
+h5 {
+	margin: 0;
+	font-size: 1.5rem;
+	font-family: 'Londrina Solid', sans-serif;
+	font-weight: 400;
+	color: var(--sectondary-text);
 }
 
 .App {
-text-align: center;
+	text-align: center;
 }
-
-
-
-
-
 .App-header {
 	background-color: var(--primary-fill);
-	min-height: 100vh;
+	background: linear-gradient(var(--primary-fill-light), var(--primary-fill));
+	min-height: 800px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 5rem;
+	border-bottom: 4px solid var(--border-primary);
+	padding: 0 2rem;
 }
 .mascot-image {
 	max-height: 460px;
@@ -54,6 +128,9 @@ text-align: center;
 	width: 36px;
 	height: 36px;
 	position: relative;
+	&::before {
+		display: none;
+	}
 	svg {
 		pointer-events: none;
 	}
@@ -72,7 +149,7 @@ text-align: center;
 		border-radius: 0.25rem;
 		pointer-events: none;
 	}
-	&:hover {
+	&:hover, &:focus {
 		border-color: var(--primary-text);
 		.icon-tooltip {
 			top: -1.5rem;
@@ -81,14 +158,46 @@ text-align: center;
 		}
 	}
 }
+.header-about {
+	max-width: 340px;
+	background: rgba(56, 99, 150, 0.15);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	text-align: left;
+	color: var(--primary-text);
+}
+.text-large {
+	font-size: 1.5rem;
+	font-family: 'Londrina Solid', sans-serif;
+}
 footer {
 	font-size: 0.625rem;
 	color: #333;
 	padding: 1rem 0;
 	background-color: var(--primary-fill);
 }
+main {
+	background-color: var(--secondary-fill);
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.portfolio-section {
+	padding: 2rem;
+	text-align: left;
+	&:not(:last-child) {
+		border-bottom: 1px solid var(--border-secondary);
+	}
+}
+.portfolio-section-header {
+	position: relative;
+}
+.portfolio-section-header-image {
+	max-width: 100%;
+}
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1080px) {
 	.App-header {
 		display: flex;
 		flex-direction: column;
@@ -108,5 +217,14 @@ footer {
 	}
 	.icons {
 		justify-content: center;
+		margin-bottom: 2rem;
+	}
+	.header-about {
+		max-width: 100%;
+		margin: 0 2rem 3rem;
+	}
+	.portfolio-header {
+		right: 50%;
+		transform: translateX(50%);
 	}
 }
