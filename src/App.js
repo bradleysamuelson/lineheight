@@ -109,7 +109,7 @@ function App() {
 					<p>Interaction Design, Prototyping</p>
 					<h5>The Process</h5>
 					<p>I worked with another designer to concept ideas for simplification. I then created a prototype that could be put in front of users to see how well our crazy ideas would be received.</p>
-					<p><a href="https://bradleysamuelson.github.io/prototyping/inline-edit" target="_blank">View the Prototype</a></p>
+					<p><a href="https://bradleysamuelson.github.io/prototyping/focus-mode" target="_blank">View the Prototype</a></p>
 					<h5>Results</h5>
 					<p>Sometimes you can have a really cool idea that just doesn’t resonate with your users. 
 						As designers, we can create an innovative concept that just might not be the right solution for the 
