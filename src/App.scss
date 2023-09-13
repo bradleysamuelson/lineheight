@@ -104,6 +104,7 @@ h5 {
 	background: linear-gradient(var(--primary-fill-light), var(--primary-fill));
 	height: 100vh;
 	min-height: 740px;
+	max-height: 860px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -242,6 +243,8 @@ main {
 		flex-direction: column;
 		gap: 0;
 		padding-top: 1rem;
+		max-height: none;
+		height: auto;
 	}
 	.mascot-image {
 		max-height: 300px;
