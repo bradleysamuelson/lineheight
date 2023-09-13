@@ -9,6 +9,7 @@
 	--border-primary: var(--primary-text);
 	--border-secondary: #BFCBD9;
 	--primary-link: #386396;
+	--primary-link-hover: #5f88b9;
 }
 body {
 	background-color: var(--secondary-fill);
@@ -101,7 +102,8 @@ h5 {
 .App-header {
 	background-color: var(--primary-fill);
 	background: linear-gradient(var(--primary-fill-light), var(--primary-fill));
-	min-height: 800px;
+	height: 100vh;
+	min-height: 740px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -196,6 +198,43 @@ main {
 .portfolio-section-header-image {
 	max-width: 100%;
 }
+.btn {
+	margin-right: 10px;
+	padding: 0.5rem 1rem;
+	background: var(--primary-link);
+	color: white;
+	border-radius: 20px;
+	text-decoration: none;
+	transition: 0.75s ease;
+	display: inline-flex;
+	width: auto;
+	align-items: center;
+	gap: 1rem;
+	&:hover {
+		color: white;
+		background: var(--primary-link-hover);
+		transition: 0.75s ease;
+	}
+	&:focus-visible {
+		background: var(--primary-link-hover);
+		box-shadow: var(--primary-text) 0px 1px 4px, var(--primary-text) 0px 0px 0px 3px;
+	}
+	&::before {
+		display: none;
+	}
+	span {
+		white-space: nowrap;
+	}
+	.icon {
+		width: 0.75rem;
+		height: 0.75rem;
+	}
+}
+.button-container {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
 
 @media screen and (max-width: 1080px) {
 	.App-header {
@@ -231,5 +270,12 @@ main {
 		transform: translateX(50%);
 		font-family: 'Londrina Solid', sans-serif;
 		font-weight: 500;
+	}
+	
+}
+@media screen and (max-width: 767px) {
+	.button-container {
+		flex-direction: column;
+		width: 100%;
 	}
 }

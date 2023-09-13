@@ -4,9 +4,11 @@ import DesignSystemHeader from './img/design-system.png';
 import InlineEditHeader from './img/inline-edit.png';
 import FocusModeHeader from './img/focus-mode.png';
 
-// const LinkedInIcon = (
-	
-// )
+function ExternalIcon() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className='icon' fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+    );
+}
 
 function App() {
   return (
@@ -71,9 +73,12 @@ function App() {
 					<p>Design, Documentation, Component Development, CSS Framework, Icon System Architecture and Creation</p>
 					<h5>The Process</h5>
 					<p>Creating a design system and component library has to be a collaborative effort across design, product, and engineering teams. The process started with the UX design team creating paradigms and standards, then driving requirements for components to be added to the library. I was in a unique position as a designer and developer that could help guide the process and facilitate collaboration. From the design side, I helped create and review component requirements and visual designs, created interactions and animations to give components life, and wrote standards and documentation to make implementation of the components seamless. As an engineer on the project, I was a key contributor to creating a scalable and theme-able <a href="https://preamp.design/#/mixer/getting-started" target='_blank'>CSS framework</a> that could utilize design tokens such as font styles, color variables, and other utilities. I also directly contributed to the development with production code for several of the components as well as architecting and creating the icon package to easily include the icon set anywhere in the platform. </p>
-					<p><a href="https://preamp.design/#/core/buttons/Button" target='_blank'>The Component Library</a></p>
-					<p><a href="https://preamp.design/#/mixer/getting-started" target='_blank'>The CSS Framework Documentation </a></p>
-					<p><a href="https://preamp.design/#/signal" target='_blank'>The Icon System</a></p>
+					<p>Technology used: Sketch, React, HTML, CSS/SASS, GitHub</p>
+					<p className="button-container">
+						<a href="https://preamp.design/#/core/buttons/Button" className="btn" target='_blank'><span>The Component Library</span> <ExternalIcon /></a> 
+						<a href="https://preamp.design/#/mixer/getting-started" className="btn" target='_blank'><span>The CSS Framework Documentation</span> <ExternalIcon /></a>
+						<a href="https://preamp.design/#/signal" className="btn" target='_blank'><span>The Icon System</span> <ExternalIcon /></a>
+					</p>
 					<h5>Results</h5>
 					<p>While it was meant to be an ongoing process, we immediately felt the results by way of increased speed to design and develop new features. End users saw the benefit of a consistent implementation of common standards and paradigms. An additional advantage was gained in that we could utilize the components in the creation of rapid prototypes to quickly test new features and workflows. Because we separated out the CSS framework, we were also able to use it to quickly align the look and feel of an external product, built on a completely different tech stack, that was added to the product suite through an acquisition, with minimal effort.</p>
 				</div>
@@ -91,7 +96,8 @@ function App() {
 					<p>Interaction Design, Prototyping</p>
 					<h5>The Process</h5>
 					<p>I worked with a visual designer and UX researcher to develop the paradigm and a quantitative research plan. The designer came up with a visual design treatment based on a collaborative discussion around options to solve user needs. I then developed a prototype to showcase the interaction with components and worked with the researcher to create a series of tasks that the user would be asked to accomplish. Using <a href="https://www.hotjar.com/" target='_blank'>Hotjar</a>, we tracked the use of the prototype, giving us quantitative insight into how many users could complete each task. We then referred users to a survey to get their feedback.</p>
-					<p><a href="https://bradleysamuelson.github.io/prototyping/inline-edit" target="_blank">View the Prototype</a></p>
+					<p>Technology used: Sketch, React, HTML, CSS/SASS</p>
+					<p><a href="https://bradleysamuelson.github.io/prototyping/inline-edit" className="btn" target="_blank"><span>View the Prototype</span> <ExternalIcon /></a></p>
 					<h5>Results</h5>
 					<p>Overall, the design paradigm was validated and users gave positive feedback about the ease of use, however we did discover aspects of the initial design that could be improved. The process was also successful because it allowed us to send the prototype and feedback form to a larger number of users since they could complete it at their own pace and didn’t require organizing meetings, taking up valuable time, to review.</p>
 				</div>
@@ -109,7 +115,8 @@ function App() {
 					<p>Interaction Design, Prototyping</p>
 					<h5>The Process</h5>
 					<p>I worked with another designer to concept ideas for simplification. I then created a prototype that could be put in front of users to see how well our crazy ideas would be received.</p>
-					<p><a href="https://bradleysamuelson.github.io/prototyping/focus-mode" target="_blank">View the Prototype</a></p>
+					<p>Technology used: Sketch, React, HTML, CSS/SASS, Hotjar</p>
+					<p><a href="https://bradleysamuelson.github.io/prototyping/focus-mode" className="btn" target="_blank"><span>View the Prototype</span> <ExternalIcon /></a></p>
 					<h5>Results</h5>
 					<p>Sometimes you can have a really cool idea that just doesn’t resonate with your users. 
 						As designers, we can create an innovative concept that just might not be the right solution for the 
