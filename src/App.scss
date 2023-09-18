@@ -5,7 +5,7 @@
 	--primary-fill-light: #B2FAF0;
 	--primary-text: #192c43;
 	--secondary-fill: #F0F3F3;
-	--sectondary-text: #5C6B7D;
+	--secondary-text: #5C6B7D;
 	--border-primary: var(--primary-text);
 	--border-secondary: #BFCBD9;
 	--primary-link: #386396;
@@ -24,18 +24,20 @@ h1 {
 	margin-bottom: 1.5rem;
 }
 h2 {
-	font-family: 'Londrina Sketch', sans-serif;
+	font-family: 'Londrina Solid', sans-serif;
 	font-size: 3.5rem;
+	font-weight: 300;
 	text-align: left;
-	color: var(--primary-text);
+	color: var(--secondary-text);
 	line-height: 1;
 	margin-top: 0;
 	margin-bottom: 1.5rem;
 }
 h3 {
 	font-size: 2.5rem;
-	font-family: 'Londrina Sketch', sans-serif;
+	font-family: 'Londrina Solid', sans-serif;
 	color: var(--primary-text);
+	font-weight: 500;
 	&.portfolio-header {
 		margin: 0;
 		position: absolute;
@@ -93,7 +95,7 @@ h5 {
 	font-size: 1.5rem;
 	font-family: 'Londrina Solid', sans-serif;
 	font-weight: 400;
-	color: var(--sectondary-text);
+	color: var(--secondary-text);
 }
 
 .App {
