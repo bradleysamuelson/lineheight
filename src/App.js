@@ -3,6 +3,7 @@ import Brad from './img/brad-website.png';
 import DesignSystemHeader from './img/design-system.png';
 import InlineEditHeader from './img/inline-edit.png';
 import FocusModeHeader from './img/focus-mode.png';
+import PlatformHeader from './img/platform.png';
 
 function ExternalIcon() {
     return (
@@ -61,6 +62,36 @@ function App() {
 		</header>
 		<main>
 			<h3 className='portfolio-header'>Portfolio</h3>
+			<section className='portfolio-section'>
+				<div className='portfolio-section-header'>
+					<h4>SaaS Platform UX Design</h4>
+					<img className='portfolio-section-header-image' src={PlatformHeader} alt="SaaS Platform UX Design" />
+				</div>
+				<div className='portfolio-subsection'>
+					<h5>The Project</h5>
+					<p>
+						The User Experience team was tasked with creating a brand new UI for VideoAmp's advertising platform, incorporating new features as well as workflows from multiple previous platforms.
+						A new visual language was created, including a color palette and micro-interactions that would be user tested and included in the design system.
+					</p>
+					<h5>My Role</h5>
+					<p>Workflow Diagrams, Interaction Design, Visual Design, Prototype Development</p>
+					<h5>The Process</h5>
+					<p>
+						The entire team collaborated on updates to the existing design system based on previous user feedback. We then created workflow diagrams 
+						that could combine new features with workflows from the existing platform and another legacy platform brought in through an acquisition. 
+						The challenge was to create a cohesive platform that could adapt to the needs of several different user personas. Extensive user testing was done 
+						with internal stakeholders as well as external clients, utilizing static mockups as well as a high fidelity prototype that I created.
+					</p>
+					<p className="button-container">
+						<a href="https://bradleysamuelson.github.io/prototyping/unified-vision/dashboard" className="btn" target='_blank'><span>View the Prototype</span> <ExternalIcon /></a> 
+					</p>
+					<h5>Results</h5>
+					<p>
+						After rigorous testing and iterations, a solid solution that could accommodate all of the required user personas was created. 
+						The solution tested extremely well with both internal and external stakeholders who were very excited for the new direction.
+					</p>
+				</div>
+			</section>
 			<section className='portfolio-section'>
 				<div className='portfolio-section-header'>
 					<h4>Design System &amp; Component Library</h4>
